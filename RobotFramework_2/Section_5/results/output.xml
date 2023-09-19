@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20230822 10:19:29.377" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_5\Tests">
+<suite id="s1-s1" name="Locators 01" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_5\Tests\locators_01.robot">
+<test id="s1-s1-t1" name="Test case 1" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230822 10:19:29.546" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20230822 10:19:29.546" endtime="20230822 10:19:31.833"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id=nav-tools</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230822 10:19:31.834" level="INFO">Simulating Mouse Over on element 'id=nav-tools'.</msg>
+<status status="PASS" starttime="20230822 10:19:31.834" endtime="20230822 10:19:32.380"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Create a List</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230822 10:19:32.381" level="INFO">Clicking link 'link=Create a List'.</msg>
+<status status="PASS" starttime="20230822 10:19:32.380" endtime="20230822 10:19:33.271"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230822 10:19:34.276" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230822 10:19:33.272" endtime="20230822 10:19:34.276"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230822 10:19:34.276" endtime="20230822 10:19:36.368"/>
+</kw>
+<status status="PASS" starttime="20230822 10:19:29.545" endtime="20230822 10:19:36.369"/>
+</test>
+<status status="PASS" starttime="20230822 10:19:29.393" endtime="20230822 10:19:36.371"/>
+</suite>
+<status status="PASS" starttime="20230822 10:19:29.378" endtime="20230822 10:19:36.372"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Locators 01">Tests.Locators 01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

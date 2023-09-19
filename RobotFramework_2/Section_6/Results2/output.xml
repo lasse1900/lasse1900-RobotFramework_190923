@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20230911 15:59:52.950" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Tests">
+<suite id="s1-s1" name="Amazon" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Tests\Amazon.robot">
+<test id="s1-s1-t1" name="Should be able to login" line="18">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:53.147" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230911 15:59:53.146" endtime="20230911 15:59:54.358"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:53.146" endtime="20230911 15:59:54.358"/>
+</kw>
+<kw name="Login" library="AmazonApp">
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+<kw name="Login With Valid Credentials" library="SignIn">
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<kw name="Fill &quot;Email&quot; Field" library="SignIn">
+<arg>${Username}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Filling Email field with ${Username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230911 15:59:54.360" level="INFO">Filling Email field with admin@robotrameworktutorial.com</msg>
+<status status="PASS" starttime="20230911 15:59:54.360" endtime="20230911 15:59:54.360"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:54.359" endtime="20230911 15:59:54.360"/>
+</kw>
+<kw name="Fill &quot;Password&quot; Field" library="SignIn">
+<arg>${Password}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Filling Password field with ${Password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230911 15:59:54.360" level="INFO">Filling Password field with myPassword1</msg>
+<status status="PASS" starttime="20230911 15:59:54.360" endtime="20230911 15:59:54.360"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:54.360" endtime="20230911 15:59:54.360"/>
+</kw>
+<kw name="Click &quot;Sign In&quot; Button" library="SignIn">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking submit button</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230911 15:59:54.361" level="INFO">Clicking submit button</msg>
+<status status="PASS" starttime="20230911 15:59:54.361" endtime="20230911 15:59:54.361"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:54.360" endtime="20230911 15:59:54.361"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:54.359" endtime="20230911 15:59:54.361"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:54.359" endtime="20230911 15:59:54.361"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:54.361" endtime="20230911 15:59:56.459"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:54.361" endtime="20230911 15:59:56.460"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" starttime="20230911 15:59:53.145" endtime="20230911 15:59:56.461"/>
+</test>
+<test id="s1-s1-t2" name="Logged out user should be able to search for products" line="22">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:56.465" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230911 15:59:56.464" endtime="20230911 15:59:57.549"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:56.464" endtime="20230911 15:59:57.549"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<arg>${SEARCH_TERM}</arg>
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230911 15:59:57.550" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20230911 15:59:57.550" endtime="20230911 15:59:58.213"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:57.550" endtime="20230911 15:59:58.213"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Today's Deals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230911 16:00:03.428" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230911 16:00:03.429" level="FAIL">Text 'Today's Deals' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230911 15:59:58.213" endtime="20230911 16:00:03.438"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:58.213" endtime="20230911 16:00:03.438"/>
+</kw>
+<kw name="Search for Products" library="TopNav">
+<arg>${SearchTerm}</arg>
+<status status="NOT RUN" starttime="20230911 16:00:03.439" endtime="20230911 16:00:03.439"/>
+</kw>
+<kw name="Verify Search Completed" library="SearchResults">
+<arg>${SearchTerm}</arg>
+<status status="NOT RUN" starttime="20230911 16:00:03.439" endtime="20230911 16:00:03.439"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:57.550" endtime="20230911 16:00:03.439"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 16:00:03.440" endtime="20230911 16:00:05.569"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:03.440" endtime="20230911 16:00:05.569"/>
+</kw>
+<tag>search</tag>
+<status status="FAIL" starttime="20230911 15:59:56.464" endtime="20230911 16:00:05.570">Text 'Today's Deals' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t3" name="Search results page should contain 30 products" line="26">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 16:00:05.573" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230911 16:00:05.572" endtime="20230911 16:00:06.766"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:05.572" endtime="20230911 16:00:06.766"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<arg>${SEARCH_TERM}</arg>
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230911 16:00:06.767" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20230911 16:00:06.767" endtime="20230911 16:00:07.442"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:06.767" endtime="20230911 16:00:07.442"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Today's Deals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230911 16:00:12.657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230911 16:00:12.658" level="FAIL">Text 'Today's Deals' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230911 16:00:07.442" endtime="20230911 16:00:12.658"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:07.442" endtime="20230911 16:00:12.658"/>
+</kw>
+<kw name="Search for Products" library="TopNav">
+<arg>${SearchTerm}</arg>
+<status status="NOT RUN" starttime="20230911 16:00:12.658" endtime="20230911 16:00:12.659"/>
+</kw>
+<kw name="Verify Search Completed" library="SearchResults">
+<arg>${SearchTerm}</arg>
+<status status="NOT RUN" starttime="20230911 16:00:12.659" endtime="20230911 16:00:12.659"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:06.766" endtime="20230911 16:00:12.659"/>
+</kw>
+<kw name="Verify Results Page Contains Products" library="AmazonApp">
+<arg>30</arg>
+<status status="NOT RUN" starttime="20230911 16:00:12.659" endtime="20230911 16:00:12.660"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 16:00:12.660" endtime="20230911 16:00:14.776"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:12.660" endtime="20230911 16:00:14.777"/>
+</kw>
+<tag>Current</tag>
+<status status="FAIL" starttime="20230911 16:00:05.571" endtime="20230911 16:00:14.778">Text 'Today's Deals' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t4" name="Logged out user should be able to view a product" line="31">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 16:00:14.782" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230911 16:00:14.782" endtime="20230911 16:00:15.948"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:14.782" endtime="20230911 16:00:15.949"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<arg>${SEARCH_TERM}</arg>
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230911 16:00:15.950" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20230911 16:00:15.949" endtime="20230911 16:00:16.886"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:15.949" endtime="20230911 16:00:16.886"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Today's Deals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230911 16:00:16.886" endtime="20230911 16:00:16.916"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:16.886" endtime="20230911 16:00:16.916"/>
+</kw>
+<kw name="Search for Products" library="TopNav">
+<arg>${SearchTerm}</arg>
+<kw name="Enter Search Term" library="TopNav">
+<arg>${SearchTerm}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TOPNAV_SEARCH_BAR}</arg>
+<arg>${SearchTerm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230911 16:00:16.917" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230911 16:00:16.916" endtime="20230911 16:00:17.292"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:16.916" endtime="20230911 16:00:17.292"/>
+</kw>
+<kw name="Submit Search" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${TOPNAV_SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230911 16:00:17.293" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230911 16:00:17.292" endtime="20230911 16:00:17.355"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:17.292" endtime="20230911 16:00:17.356"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:16.916" endtime="20230911 16:00:17.356"/>
+</kw>
+<kw name="Verify Search Completed" library="SearchResults">
+<arg>${SearchTerm}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${SearchTerm}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230911 16:00:22.641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230911 16:00:22.642" level="FAIL">Text 'Ferrari 458' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230911 16:00:17.357" endtime="20230911 16:00:22.642"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:17.356" endtime="20230911 16:00:22.642"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:15.949" endtime="20230911 16:00:22.643"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20230911 16:00:22.644" endtime="20230911 16:00:22.644"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 16:00:22.644" endtime="20230911 16:00:24.772"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:22.644" endtime="20230911 16:00:24.773"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:14.781" endtime="20230911 16:00:24.775">Text 'Ferrari 458' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t5" name="Logged out user should be able to add product to cart" line="35">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 16:00:24.778" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230911 16:00:24.777" endtime="20230911 16:00:25.942"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:24.777" endtime="20230911 16:00:25.942"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<arg>${SEARCH_TERM}</arg>
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230911 16:00:25.943" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20230911 16:00:25.943" endtime="20230911 16:00:27.057"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:25.942" endtime="20230911 16:00:27.057"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Today's Deals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230911 16:00:27.058" endtime="20230911 16:00:27.087"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:27.058" endtime="20230911 16:00:27.087"/>
+</kw>
+<kw name="Search for Products" library="TopNav">
+<arg>${SearchTerm}</arg>
+<kw name="Enter Search Term" library="TopNav">
+<arg>${SearchTerm}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TOPNAV_SEARCH_BAR}</arg>
+<arg>${SearchTerm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230911 16:00:27.088" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230911 16:00:27.088" endtime="20230911 16:00:27.453"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:27.088" endtime="20230911 16:00:27.454"/>
+</kw>
+<kw name="Submit Search" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${TOPNAV_SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230911 16:00:27.454" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230911 16:00:27.454" endtime="20230911 16:00:27.519"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:27.454" endtime="20230911 16:00:27.519"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:27.087" endtime="20230911 16:00:27.519"/>
+</kw>
+<kw name="Verify Search Completed" library="SearchResults">
+<arg>${SearchTerm}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${SearchTerm}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230911 16:00:32.851" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230911 16:00:32.851" level="FAIL">Text 'Ferrari 458' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230911 16:00:27.520" endtime="20230911 16:00:32.852"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:27.520" endtime="20230911 16:00:32.852"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:25.942" endtime="20230911 16:00:32.852"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20230911 16:00:32.853" endtime="20230911 16:00:32.853"/>
+</kw>
+<kw name="Add Product to Cart" library="AmazonApp">
+<status status="NOT RUN" starttime="20230911 16:00:32.854" endtime="20230911 16:00:32.854"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 16:00:32.854" endtime="20230911 16:00:34.990"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:32.854" endtime="20230911 16:00:34.990"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:24.777" endtime="20230911 16:00:34.991">Text 'Ferrari 458' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t6" name="Logged out user should be asked to sign in to check out" line="40">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 16:00:34.993" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230911 16:00:34.993" endtime="20230911 16:00:36.159"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:34.993" endtime="20230911 16:00:36.159"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<arg>${SEARCH_TERM}</arg>
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230911 16:00:36.160" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20230911 16:00:36.160" endtime="20230911 16:00:37.038"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:36.160" endtime="20230911 16:00:37.038"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Today's Deals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230911 16:00:37.039" endtime="20230911 16:00:37.056"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:37.038" endtime="20230911 16:00:37.056"/>
+</kw>
+<kw name="Search for Products" library="TopNav">
+<arg>${SearchTerm}</arg>
+<kw name="Enter Search Term" library="TopNav">
+<arg>${SearchTerm}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TOPNAV_SEARCH_BAR}</arg>
+<arg>${SearchTerm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230911 16:00:37.057" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230911 16:00:37.057" endtime="20230911 16:00:37.429"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:37.057" endtime="20230911 16:00:37.429"/>
+</kw>
+<kw name="Submit Search" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${TOPNAV_SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230911 16:00:37.429" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230911 16:00:37.429" endtime="20230911 16:00:37.505"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:37.429" endtime="20230911 16:00:37.506"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:37.056" endtime="20230911 16:00:37.506"/>
+</kw>
+<kw name="Verify Search Completed" library="SearchResults">
+<arg>${SearchTerm}</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${SearchTerm}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230911 16:00:42.780" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230911 16:00:42.780" level="FAIL">Text 'Ferrari 458' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230911 16:00:37.507" endtime="20230911 16:00:42.780"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:37.506" endtime="20230911 16:00:42.781"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:36.159" endtime="20230911 16:00:42.781"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20230911 16:00:42.782" endtime="20230911 16:00:42.782"/>
+</kw>
+<kw name="Add Product to Cart" library="AmazonApp">
+<status status="NOT RUN" starttime="20230911 16:00:42.782" endtime="20230911 16:00:42.782"/>
+</kw>
+<kw name="Begin Checkout" library="AmazonApp">
+<status status="NOT RUN" starttime="20230911 16:00:42.783" endtime="20230911 16:00:42.783"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 16:00:42.783" endtime="20230911 16:00:44.913"/>
+</kw>
+<status status="PASS" starttime="20230911 16:00:42.783" endtime="20230911 16:00:44.914"/>
+</kw>
+<status status="FAIL" starttime="20230911 16:00:34.992" endtime="20230911 16:00:44.915">Text 'Ferrari 458' did not appear in 5 seconds.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20230911 15:59:52.966" endtime="20230911 16:00:44.918"/>
+</suite>
+<status status="FAIL" starttime="20230911 15:59:52.951" endtime="20230911 16:00:44.920"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Current</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
+<stat pass="0" fail="1" skip="0">search</stat>
+</tag>
+<suite>
+<stat pass="1" fail="5" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="5" skip="0" id="s1-s1" name="Amazon">Tests.Amazon</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230911 15:59:53.119" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\LandingPage.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:53.124" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\TopNav.robot' on line 3: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:53.128" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\SearchResults.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:53.134" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\Product.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:53.138" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\Cart.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:53.143" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\SignIn.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

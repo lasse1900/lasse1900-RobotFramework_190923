@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20230911 15:59:04.629" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Tests\Amazon.robot">
+<test id="s1-t1" name="Should be able to login" line="18">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:04.821" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<msg timestamp="20230911 15:59:04.844" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 15:59:04.844" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" starttime="20230911 15:59:04.821" endtime="20230911 15:59:04.899"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.820" endtime="20230911 15:59:04.899"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:04.900" endtime="20230911 15:59:04.900"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:04.900" endtime="20230911 15:59:04.900"/>
+</kw>
+<tag>Login</tag>
+<status status="FAIL" starttime="20230911 15:59:04.820" endtime="20230911 15:59:04.901">Setup failed:
+WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<test id="s1-t2" name="Logged out user should be able to search for products" line="22">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:04.902" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<msg timestamp="20230911 15:59:04.904" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 15:59:04.904" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" starttime="20230911 15:59:04.902" endtime="20230911 15:59:04.904"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.901" endtime="20230911 15:59:04.905"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:04.905" endtime="20230911 15:59:04.905"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:04.905" endtime="20230911 15:59:04.905"/>
+</kw>
+<tag>search</tag>
+<status status="FAIL" starttime="20230911 15:59:04.901" endtime="20230911 15:59:04.906">Setup failed:
+WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<test id="s1-t3" name="Search results page should contain 30 products" line="26">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:04.907" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<msg timestamp="20230911 15:59:04.909" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 15:59:04.909" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" starttime="20230911 15:59:04.907" endtime="20230911 15:59:04.910"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.907" endtime="20230911 15:59:04.910"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:04.911" endtime="20230911 15:59:04.911"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:04.911" endtime="20230911 15:59:04.911"/>
+</kw>
+<tag>Current</tag>
+<status status="FAIL" starttime="20230911 15:59:04.906" endtime="20230911 15:59:04.912">Setup failed:
+WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<test id="s1-t4" name="Logged out user should be able to view a product" line="31">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:04.913" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<msg timestamp="20230911 15:59:04.915" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 15:59:04.916" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" starttime="20230911 15:59:04.913" endtime="20230911 15:59:04.916"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.913" endtime="20230911 15:59:04.916"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:04.917" endtime="20230911 15:59:04.917"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:04.917" endtime="20230911 15:59:04.917"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.913" endtime="20230911 15:59:04.917">Setup failed:
+WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<test id="s1-t5" name="Logged out user should be able to add product to cart" line="35">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:04.918" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<msg timestamp="20230911 15:59:04.920" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 15:59:04.920" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" starttime="20230911 15:59:04.918" endtime="20230911 15:59:04.921"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.918" endtime="20230911 15:59:04.921"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:04.922" endtime="20230911 15:59:04.922"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:04.922" endtime="20230911 15:59:04.922"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.918" endtime="20230911 15:59:04.922">Setup failed:
+WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<test id="s1-t6" name="Logged out user should be asked to sign in to check out" line="40">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 15:59:04.924" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<msg timestamp="20230911 15:59:04.926" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 15:59:04.926" level="FAIL">WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</msg>
+<status status="FAIL" starttime="20230911 15:59:04.924" endtime="20230911 15:59:04.927"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.924" endtime="20230911 15:59:04.927"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 15:59:04.928" endtime="20230911 15:59:04.928"/>
+</kw>
+<status status="PASS" starttime="20230911 15:59:04.927" endtime="20230911 15:59:04.928"/>
+</kw>
+<status status="FAIL" starttime="20230911 15:59:04.923" endtime="20230911 15:59:04.928">Setup failed:
+WebDriverException: Message: 'IEDriverServer.exe' executable needs to be in PATH. Please download from https://www.selenium.dev/downloads/ and read up at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver
+</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20230911 15:59:04.630" endtime="20230911 15:59:04.929"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Current</stat>
+<stat pass="0" fail="1" skip="0">Login</stat>
+<stat pass="0" fail="1" skip="0">search</stat>
+</tag>
+<suite>
+<stat pass="0" fail="6" skip="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230911 15:59:04.792" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\LandingPage.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:04.797" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\TopNav.robot' on line 3: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:04.801" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\SearchResults.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:04.808" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\Product.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:04.813" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\Cart.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20230911 15:59:04.817" level="ERROR">Error in file 'C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_6\Resources\PO\SignIn.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\ett19411\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

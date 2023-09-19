@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20230801 10:47:50.169" rpa="false" schemaversion="3">
+<suite id="s1" name="Operating System" source="C:\coding\RobotFramework_BrianLamb\explore-libraries\tests\operating_system.robot">
+<test id="s1-t1" name="Create Some Directories" line="14">
+<kw name="Create the Base Directory" library="OS">
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${output_directory}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20230801 10:47:50.193" level="INFO" html="true">Directory '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.192" endtime="20230801 10:47:50.193"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${output_directory}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.193" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.193" endtime="20230801 10:47:50.193"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.192" endtime="20230801 10:47:50.193"/>
+</kw>
+<kw name="Create Directory 1" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${directory_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.194" level="INFO">${directory_path} = Outputs\first directory</msg>
+<status status="PASS" starttime="20230801 10:47:50.193" endtime="20230801 10:47:50.194"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${directory_path}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20230801 10:47:50.194" level="INFO" html="true">Directory '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.194" endtime="20230801 10:47:50.194"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${directory_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.194" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.194" endtime="20230801 10:47:50.194"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.193" endtime="20230801 10:47:50.194"/>
+</kw>
+<kw name="Create Directory 2" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${directory_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.195" level="INFO">${directory_path} = Outputs\second directory</msg>
+<status status="PASS" starttime="20230801 10:47:50.194" endtime="20230801 10:47:50.195"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${directory_path}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20230801 10:47:50.195" level="INFO" html="true">Directory '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.195" endtime="20230801 10:47:50.195"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${directory_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.195" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.195" endtime="20230801 10:47:50.195"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.194" endtime="20230801 10:47:50.195"/>
+</kw>
+<tag>OperatingSystem</tag>
+<status status="PASS" starttime="20230801 10:47:50.192" endtime="20230801 10:47:50.195"/>
+</test>
+<test id="s1-t2" name="Create Some Files" line="20">
+<kw name="Create the First File" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.196" level="INFO">${file_path} = Outputs\first directory\first file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.196" endtime="20230801 10:47:50.196"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<arg>This is some text in file one!</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20230801 10:47:50.197" level="INFO" html="true">Created file '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230801 10:47:50.196" endtime="20230801 10:47:50.197"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.197" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.197" endtime="20230801 10:47:50.197"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.196" endtime="20230801 10:47:50.197"/>
+</kw>
+<kw name="Create the Second File" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_2}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.198" level="INFO">${file_path} = Outputs\second directory\second file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.198" endtime="20230801 10:47:50.198"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<arg>This is some text in file two!</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20230801 10:47:50.198" level="INFO" html="true">Created file '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\second file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\second file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230801 10:47:50.198" endtime="20230801 10:47:50.198"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.199" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\second file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\second file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.198" endtime="20230801 10:47:50.199"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.197" endtime="20230801 10:47:50.199"/>
+</kw>
+<kw name="Create the Third File" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_3}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.199" level="INFO">${file_path} = Outputs\second directory\third file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.199" endtime="20230801 10:47:50.199"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${file_path}</arg>
+<arg>This is some text in file three!</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20230801 10:47:50.200" level="INFO" html="true">Created file '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230801 10:47:50.199" endtime="20230801 10:47:50.200"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${file_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.200" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.200" endtime="20230801 10:47:50.200"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.199" endtime="20230801 10:47:50.200"/>
+</kw>
+<tag>OperatingSystem</tag>
+<status status="PASS" starttime="20230801 10:47:50.196" endtime="20230801 10:47:50.200"/>
+</test>
+<test id="s1-t3" name="Move a File" line="26">
+<kw name="Move File 3 from Directory 2 to Directory 1" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${source_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_3}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.202" level="INFO">${source_path} = Outputs\second directory\third file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.202" endtime="20230801 10:47:50.202"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${target_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_3}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.202" level="INFO">${target_path} = Outputs\first directory\third file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.202" endtime="20230801 10:47:50.202"/>
+</kw>
+<kw name="Move File" library="OperatingSystem">
+<arg>${source_path}</arg>
+<arg>${target_path}</arg>
+<doc>Moves the source file into the destination.</doc>
+<msg timestamp="20230801 10:47:50.206" level="INFO" html="true">Moved file from '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt&lt;/a&gt;' to '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\third file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\third file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230801 10:47:50.202" endtime="20230801 10:47:50.206"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${target_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.207" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\third file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\third file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.207" endtime="20230801 10:47:50.207"/>
+</kw>
+<kw name="Should Not Exist" library="OperatingSystem">
+<arg>${source_path}</arg>
+<doc>Fails if the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.207" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\third file.txt&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20230801 10:47:50.207" endtime="20230801 10:47:50.207"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.202" endtime="20230801 10:47:50.207"/>
+</kw>
+<tag>OperatingSystem</tag>
+<status status="PASS" starttime="20230801 10:47:50.201" endtime="20230801 10:47:50.208"/>
+</test>
+<test id="s1-t4" name="Copy a File" line="30">
+<kw name="Copy File 1 from Directory 1 to Directory 2" library="OS">
+<kw name="Join Path" library="OperatingSystem">
+<var>${source_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.209" level="INFO">${source_path} = Outputs\first directory\first file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.209" endtime="20230801 10:47:50.209"/>
+</kw>
+<kw name="Join Path" library="OperatingSystem">
+<var>${target_path}</var>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20230801 10:47:50.209" level="INFO">${target_path} = Outputs\second directory\first file.txt</msg>
+<status status="PASS" starttime="20230801 10:47:50.209" endtime="20230801 10:47:50.209"/>
+</kw>
+<kw name="Copy File" library="OperatingSystem">
+<arg>${source_path}</arg>
+<arg>${target_path}</arg>
+<doc>Copies the source file into the destination.</doc>
+<msg timestamp="20230801 10:47:50.217" level="INFO" html="true">Copied file from '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt&lt;/a&gt;' to '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\first file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\first file.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20230801 10:47:50.210" endtime="20230801 10:47:50.217"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${source_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.217" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\first directory\first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.217" endtime="20230801 10:47:50.217"/>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<arg>${target_path}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20230801 10:47:50.217" level="INFO" html="true">Path '&lt;a href="file://C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\first file.txt"&gt;C:\coding\RobotFramework_BrianLamb\explore-libraries\Outputs\second directory\first file.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20230801 10:47:50.217" endtime="20230801 10:47:50.217"/>
+</kw>
+<status status="PASS" starttime="20230801 10:47:50.209" endtime="20230801 10:47:50.217"/>
+</kw>
+<tag>OperatingSystem</tag>
+<status status="PASS" starttime="20230801 10:47:50.209" endtime="20230801 10:47:50.218"/>
+</test>
+<doc>These are some file &amp; directory tests</doc>
+<status status="PASS" starttime="20230801 10:47:50.170" endtime="20230801 10:47:50.218"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">OperatingSystem</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Operating System">Operating System</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

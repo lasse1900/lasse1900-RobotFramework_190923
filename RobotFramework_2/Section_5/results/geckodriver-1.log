@@ -1,0 +1,26 @@
+1692686524265	geckodriver	INFO	Listening on 127.0.0.1:58811
+1692686527326	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58812" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ett19411\\AppData\\Local\\Temp\\rust_mozprofilebb4rIF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692686527571	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692686527645	Marionette	INFO	Listening on port 58820
+WebDriver BiDi listening on ws://127.0.0.1:58812
+Read port: 58820
+1692686527796	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58812/devtools/browser/97891e0b-333a-4c36-a4e1-94990e58e46d
+JavaScript warning: https://www.amazon.com/ line 1941 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/, line 1981: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1692686532551	Marionette	INFO	Stopped listening on port 58820
+JavaScript warning: https://m.media-amazon.com/images/I/11Y+5x+kkTL._RC|51jfxuELZ4L.js,11yKORv-GTL.js,11GgN1+C7hL.js,01+z+uIeJ-L.js,01VRMV3FBdL.js,21SDJtBU-PL.js,012FVc3131L.js,11rRjDLdAVL.js,516j7qaWchL.js,11kWu3cNjYL.js,11tMohjWmVL.js,11OREnu1epL.js,11r3xGoc2RL.js,21ssiLNIZvL.js,0190vxtlzcL.js,51+N26vFcBL.js,01JYHc2oIlL.js,31nfKXylf6L.js,01ezj5Rkz1L.js,11bEz2VIYrL.js,31o2NGTXThL.js,01rpauTep4L.js,01UrOK220PL.js_.js?AUIClients/AmazonUI, line 16: Script terminated by timeout at:
+d</delay/<@https://m.media-amazon.com/images/I/11Y+5x+kkTL._RC|51jfxuELZ4L.js,11yKORv-GTL.js,11GgN1+C7hL.js,01+z+uIeJ-L.js,01VRMV3FBdL.js,21SDJtBU-PL.js,012FVc3131L.js,11rRjDLdAVL.js,516j7qaWchL.js,11kWu3cNjYL.js,11tMohjWmVL.js,11OREnu1epL.js,11r3xGoc2RL.js,21ssiLNIZvL.js,0190vxtlzcL.js,51+N26vFcBL.js,01JYHc2oIlL.js,31nfKXylf6L.js,01ezj5Rkz1L.js,11bEz2VIYrL.js,31o2NGTXThL.js,01rpauTep4L.js,01UrOK220PL.js_.js?AUIClients/AmazonUI:16:200
+
+Dynamically enable window occlusion 1
+[Parent 23052, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 16672, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 23052, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 16672, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 23052, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 16672, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
+[Parent 23052, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:621
+[GPU 16672, IPC I/O Child] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:443
