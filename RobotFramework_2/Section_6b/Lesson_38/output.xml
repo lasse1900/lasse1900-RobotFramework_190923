@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20230926 13:28:09.136" rpa="false" schemaversion="4">
+<suite id="s1" name="amazon qweb 38 Selenium" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_38\amazon_qweb_38_Selenium.robot">
+<test id="s1-t1" name="Test case 1" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230926 13:28:09.353" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com'.</msg>
+<status status="PASS" starttime="20230926 13:28:09.353" endtime="20230926 13:28:13.713"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230926 13:28:13.715" endtime="20230926 13:28:14.009"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230926 13:28:15.012" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230926 13:28:14.012" endtime="20230926 13:28:15.012"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Amazon')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230926 13:28:15.014" level="INFO">Clicking element 'xpath=//a[contains(text(),'Amazon')]'.</msg>
+<status status="PASS" starttime="20230926 13:28:15.013" endtime="20230926 13:28:16.840"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Amazon Currency Converter')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230926 13:28:16.841" level="INFO">Clicking element 'xpath=//a[contains(text(),'Amazon Currency Converter')]'.</msg>
+<msg timestamp="20230926 13:28:17.445" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230926 13:28:17.445" level="FAIL">Element with locator 'xpath=//a[contains(text(),'Amazon Currency Converter')]' not found.</msg>
+<status status="FAIL" starttime="20230926 13:28:16.841" endtime="20230926 13:28:17.449"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[type*='ubmi']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230926 13:28:17.450" endtime="20230926 13:28:17.450"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230926 13:28:17.451" endtime="20230926 13:28:17.451"/>
+</kw>
+<status status="FAIL" starttime="20230926 13:28:09.352" endtime="20230926 13:28:17.451">Element with locator 'xpath=//a[contains(text(),'Amazon Currency Converter')]' not found.</status>
+</test>
+<status status="FAIL" starttime="20230926 13:28:09.139" endtime="20230926 13:28:17.453"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="amazon qweb 38 Selenium">amazon qweb 38 Selenium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20230926 11:31:45.380" rpa="false" schemaversion="4">
+<suite id="s1" name="amazon qweb 36 Selenium" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_36\amazon_qweb_36_Selenium.robot">
+<test id="s1-t1" name="Test case 1" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230926 11:31:45.582" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com'.</msg>
+<status status="PASS" starttime="20230926 11:31:45.581" endtime="20230926 11:31:49.905"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230926 11:31:49.907" endtime="20230926 11:31:50.123"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230926 11:31:51.125" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230926 11:31:50.125" endtime="20230926 11:31:51.125"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[starts-with(@type,"sub")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230926 11:31:51.127" level="INFO">Clicking element 'xpath=//input[starts-with(@type,"sub")]'.</msg>
+<status status="PASS" starttime="20230926 11:31:51.126" endtime="20230926 11:31:52.655"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[type='Submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230926 11:31:52.658" level="INFO">Clicking element 'css=input[type='Submit']'.</msg>
+<status status="PASS" starttime="20230926 11:31:52.658" endtime="20230926 11:31:53.949"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=input[type^='Sub']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230926 11:31:53.951" level="INFO">Clicking element 'css=input[type^='Sub']'.</msg>
+<status status="PASS" starttime="20230926 11:31:53.951" endtime="20230926 11:31:55.022"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230926 11:31:56.023" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230926 11:31:55.023" endtime="20230926 11:31:56.023"/>
+</kw>
+<status status="PASS" starttime="20230926 11:31:45.581" endtime="20230926 11:31:56.025"/>
+</test>
+<status status="PASS" starttime="20230926 11:31:45.384" endtime="20230926 11:31:56.030"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="amazon qweb 36 Selenium">amazon qweb 36 Selenium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

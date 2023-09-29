@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20230926 17:00:38.426" rpa="false" schemaversion="4">
+<suite id="s1" name="IMB Tests" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\dictionary-users\tests\IMB_Tests.robot">
+<test id="s1-t1" name="Should be able to view landing page" line="17">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230926 17:00:38.649" endtime="20230926 17:00:38.649"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230926 17:00:38.650" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230926 17:00:38.649" endtime="20230926 17:00:39.976"/>
+</kw>
+<status status="PASS" starttime="20230926 17:00:38.649" endtime="20230926 17:00:39.976"/>
+</kw>
+<kw name="Navigate to Landing Page" library="ImbApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230926 17:00:39.978" level="INFO">Opening browser 'firefox' to base url '{'dev': 'http://dev.internetmillionaireblueprint.com', 'qa': 'http://qa.internetmillionaireblueprint.com', 'stage': 'http://stage.internetmillionaireblueprint.com', 'prod': 'http://www.amazon.com'}'.</msg>
+<msg timestamp="20230926 17:00:43.242" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230926 17:00:43.242" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20230926 17:00:39.977" endtime="20230926 17:00:43.245"/>
+</kw>
+<status status="FAIL" starttime="20230926 17:00:39.977" endtime="20230926 17:00:43.245"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<status status="NOT RUN" starttime="20230926 17:00:43.246" endtime="20230926 17:00:43.246"/>
+</kw>
+<status status="FAIL" starttime="20230926 17:00:39.977" endtime="20230926 17:00:43.246"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230926 17:00:43.246" endtime="20230926 17:00:43.246"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230926 17:00:43.247" endtime="20230926 17:00:45.399"/>
+</kw>
+<status status="PASS" starttime="20230926 17:00:43.247" endtime="20230926 17:00:45.400"/>
+</kw>
+<tag>landing</tag>
+<status status="FAIL" starttime="20230926 17:00:38.648" endtime="20230926 17:00:45.401">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t2" name="Should be able to register for new account" line="22">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230926 17:00:45.411" endtime="20230926 17:00:45.411"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230926 17:00:45.413" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230926 17:00:45.412" endtime="20230926 17:00:46.775"/>
+</kw>
+<status status="PASS" starttime="20230926 17:00:45.410" endtime="20230926 17:00:46.775"/>
+</kw>
+<kw name="Navigate to Landing Page" library="ImbApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230926 17:00:48.811" level="INFO">Opening browser 'firefox' to base url '{'dev': 'http://dev.internetmillionaireblueprint.com', 'qa': 'http://qa.internetmillionaireblueprint.com', 'stage': 'http://stage.internetmillionaireblueprint.com', 'prod': 'http://www.amazon.com'}'.</msg>
+<msg timestamp="20230926 17:00:52.039" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230926 17:00:52.039" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20230926 17:00:48.810" endtime="20230926 17:00:52.040"/>
+</kw>
+<status status="FAIL" starttime="20230926 17:00:46.776" endtime="20230926 17:00:52.040"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<status status="NOT RUN" starttime="20230926 17:00:52.040" endtime="20230926 17:00:52.040"/>
+</kw>
+<status status="FAIL" starttime="20230926 17:00:46.776" endtime="20230926 17:00:52.040"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230926 17:00:52.041" endtime="20230926 17:00:52.041"/>
+</kw>
+<kw name="Create New Account" library="ImbApp">
+<arg>${CUSTOMER_USER}</arg>
+<status status="NOT RUN" starttime="20230926 17:00:52.041" endtime="20230926 17:00:52.041"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230926 17:00:52.042" endtime="20230926 17:00:54.202"/>
+</kw>
+<status status="PASS" starttime="20230926 17:00:52.042" endtime="20230926 17:00:54.202"/>
+</kw>
+<tag>register</tag>
+<status status="FAIL" starttime="20230926 17:00:45.408" endtime="20230926 17:00:54.203">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<status status="FAIL" starttime="20230926 17:00:38.430" endtime="20230926 17:00:54.210"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">landing</stat>
+<stat pass="0" fail="1" skip="0">register</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="IMB Tests">IMB Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
