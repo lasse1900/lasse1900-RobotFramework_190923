@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20231011 16:10:46.788" rpa="false" schemaversion="4">
+<suite id="s1" name="IMB Tests" source="C:\coding\RobotFramework_BrianLamb\RobotFramework_2\Section_8\tests\IMB_Tests.robot">
+<test id="s1-t1" name="Should be able to view landing page" line="21">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231011 16:10:47.033" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20231011 16:10:47.033" endtime="20231011 16:10:48.381"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231011 16:10:48.381" endtime="20231011 16:10:48.504"/>
+</kw>
+<status status="PASS" starttime="20231011 16:10:47.032" endtime="20231011 16:10:48.504"/>
+</kw>
+<kw name="Navigate to Landing Page" library="ImbApp">
+<kw name="Navigate To" library="Landing">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL.${ENVIRONMENT}}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231011 16:10:48.507" level="INFO">Opening url 'https://www.is.fi/'</msg>
+<status status="PASS" starttime="20231011 16:10:48.505" endtime="20231011 16:10:51.661"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>The result is: ${ENVIRONMENT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231011 16:10:51.661" level="INFO">The result is: qa</msg>
+<status status="PASS" starttime="20231011 16:10:51.661" endtime="20231011 16:10:51.661"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${URL.${ENVIRONMENT}}' == '${string1}'</arg>
+<arg>Set Variable</arg>
+<arg>${LANDING_TEXT}</arg>
+<arg>${LANDING_TEXT_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${URL.${ENVIRONMENT}}' == '${string2}'</arg>
+<arg>Set Variable</arg>
+<arg>${LANDING_TEXT}</arg>
+<arg>etusivu</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231011 16:10:51.661" endtime="20231011 16:10:51.663"/>
+</kw>
+<status status="PASS" starttime="20231011 16:10:48.505" endtime="20231011 16:10:51.663"/>
+</kw>
+<kw name="Verify Page Loaded" library="Landing">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${LANDING_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231011 16:10:51.663" endtime="20231011 16:10:51.695"/>
+</kw>
+<status status="PASS" starttime="20231011 16:10:51.663" endtime="20231011 16:10:51.696"/>
+</kw>
+<status status="PASS" starttime="20231011 16:10:48.505" endtime="20231011 16:10:51.696"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231011 16:10:56.697" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231011 16:10:51.696" endtime="20231011 16:10:56.697"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231011 16:10:56.698" endtime="20231011 16:10:58.891"/>
+</kw>
+<status status="PASS" starttime="20231011 16:10:56.698" endtime="20231011 16:10:58.892"/>
+</kw>
+<tag>landing</tag>
+<status status="PASS" starttime="20231011 16:10:47.031" endtime="20231011 16:10:58.893"/>
+</test>
+<status status="PASS" starttime="20231011 16:10:46.793" endtime="20231011 16:10:58.899"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">landing</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="IMB Tests">IMB Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

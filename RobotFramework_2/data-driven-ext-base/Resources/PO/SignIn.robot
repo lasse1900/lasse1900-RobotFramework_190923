@@ -1,13 +1,16 @@
 *** Settings ***
-Library  Selenium2Library
+Library  SeleniumLibrary
 
 *** Variables ***
 ${SIGN_IN_EMAIL} =          xpath=//input[@ng-model='credentials.email']
 ${SIGN_IN_PASSWORD} =       xpath=//input[@ng-model='credentials.password']
 ${LOGIN_SUBMIT_BUTTON} =    Log In
+${LOGIN_URL} =    Set Variable    lasse
+${ENVIRONMENT} =    Set Variable    https://www.amazon.com/
 
 *** Keywords ***
 Navigate To
+  
     ${SignInUrl} =  Catenate  SEPARATOR=/  ${BASE_URL.${ENVIRONMENT}}  ${LOGIN_URL}
     go to  ${SignInUrl}
 
